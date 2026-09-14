@@ -20,7 +20,8 @@ public class Main {
             System.out.println("2. Restar");
             System.out.println("3. Multiplicar");
             System.out.println("4. Dividir");
-            System.out.println("5. Salir");
+            System.out.println("5. Potenciación (Calculadora científica)");
+            System.out.println("6. Salir");
             System.out.print("Seleccione una opción: ");
 
             try {
@@ -48,7 +49,21 @@ public class Main {
                         }
                     }
                 } else if (opcion == 5) {
-                    System.out.println("Gracias por usar la calculadora. ¡Hasta pronto!");
+                    try {
+                        System.out.print("Ingrese la base: ");
+                        double base = Double.parseDouble(scanner.nextLine());
+                        System.out.print("Ingrese el exponente: ");
+                        double exponente = Double.parseDouble(scanner.nextLine());
+
+                        CalculadoraCientifica calcC = new CalculadoraCientifica(base, exponente);
+                        System.out.println("Resultado: " + calcC.potenciar(base, exponente));
+                        System.out.println("Tipo: " + calcC.mostrarTipo());
+
+                    } catch (NumberFormatException e) {
+                        System.out.println("Debe ingresar un número válido.");
+                    }
+                } else if (opcion == 6) {
+                    System.out.println("Closing calculator... Goodbye!");
                     flag = false; // apagamos la bandera para salir del ciclo
                 } else {
                     System.out.println("Debe ingresar una opción válida.");

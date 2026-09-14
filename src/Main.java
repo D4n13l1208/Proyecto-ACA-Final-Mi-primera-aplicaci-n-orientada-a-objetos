@@ -63,7 +63,7 @@ public class Main {
                         System.out.println("Debe ingresar un número válido.");
                     }
                 } else if (opcion == 6) {
-                    System.out.println("Closing calculator... Goodbye!");
+                    System.out.println("Hasta pronto!");
                     flag = false; // apagamos la bandera para salir del ciclo
                 } else {
                     System.out.println("Debe ingresar una opción válida.");

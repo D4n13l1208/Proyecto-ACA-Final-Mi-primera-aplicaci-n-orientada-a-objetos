@@ -25,7 +25,9 @@ public class Calculadora {
         }
         return numero1 / numero2;
     }
+
+    // Método para polimorfismo
+    public String mostrarTipo() {
+        return "Calculadora básica";
+    }
 }
-
-
-
